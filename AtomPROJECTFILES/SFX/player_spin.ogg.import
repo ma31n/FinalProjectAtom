@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/player_spin.ogg-3776b9cdba05c45455c751757de46cb5.oggstr"
+
+[deps]
+
+source_file="res://SFX/player_spin.ogg"
+dest_files=[ "res://.import/player_spin.ogg-3776b9cdba05c45455c751757de46cb5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hot_And_Composed.mp3-45e781b695e6a3b5e8f61709cf984520.mp3str"
+
+[deps]
+
+source_file="res://Music/Hot_And_Composed.mp3"
+dest_files=[ "res://.import/Hot_And_Composed.mp3-45e781b695e6a3b5e8f61709cf984520.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

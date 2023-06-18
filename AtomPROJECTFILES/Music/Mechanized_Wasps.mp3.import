@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Mechanized_Wasps.mp3-44489aa9c353e66994e5ef41dcad48f1.mp3str"
+
+[deps]
+
+source_file="res://Music/Mechanized_Wasps.mp3"
+dest_files=[ "res://.import/Mechanized_Wasps.mp3-44489aa9c353e66994e5ef41dcad48f1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
