@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Animations/PlayerAnimations.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/AudioPlayer.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.5388, 12.1652 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 68, 128.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 50, 128.5 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 0 )
+animation = "attack_special1"
+frame = 5
+offset = Vector2( 2, -120 )
+
+[node name="Area2DHit" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DHit"]
+position = Vector2( -2.74999, 0.499919 )
+rotation = -3.14159
+scale = Vector2( 6.66552, -10.5629 )
+shape = SubResource( 1 )
+
+[node name="Area2DAttack" type="Area2D" parent="."]
+
+[node name="AttackCollisionShape2D" type="CollisionShape2D" parent="Area2DAttack"]
+position = Vector2( 125, 0 )
+shape = SubResource( 2 )
+
+[node name="Area2DAttack2" type="Area2D" parent="."]
+
+[node name="AttackCollisionShape2D" type="CollisionShape2D" parent="Area2DAttack2"]
+position = Vector2( -111, 1 )
+shape = SubResource( 2 )
+
+[node name="runningAttackTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="runningAttackCooldown" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="FinisherCooldown" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3, 0.5 )
+shape = SubResource( 5 )
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AudioPlayerBackup" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 3 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite" to="." method="_on_AnimatedSprite_frame_changed"]
+[connection signal="area_entered" from="Area2DHit" to="." method="_on_Area2DHit_area_entered"]
+[connection signal="timeout" from="runningAttackTimer" to="." method="_on_runningAttackTimer_timeout"]

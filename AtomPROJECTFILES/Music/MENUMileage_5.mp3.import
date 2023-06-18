@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MENUMileage_5.mp3-462e0f5a1221365edbefc2bebafa8788.mp3str"
+
+[deps]
+
+source_file="res://Music/MENUMileage_5.mp3"
+dest_files=[ "res://.import/MENUMileage_5.mp3-462e0f5a1221365edbefc2bebafa8788.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

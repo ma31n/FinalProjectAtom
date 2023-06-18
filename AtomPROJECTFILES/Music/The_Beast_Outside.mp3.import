@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_Beast_Outside.mp3-f4ecd2c6769492b86b73897f83d5c0f4.mp3str"
+
+[deps]
+
+source_file="res://Music/The_Beast_Outside.mp3"
+dest_files=[ "res://.import/The_Beast_Outside.mp3-f4ecd2c6769492b86b73897f83d5c0f4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
